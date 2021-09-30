@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209ac9071b7aa461a976497999c99148, type: 3}
   m_Name: Classical_SO
   m_EditorClassIdentifier: 
-  name: 4
+  genreName: 4
   instrument: 4
   buttonSprite: {fileID: 21300000, guid: de3ab2628d31e4b12aeeea0d171c98d5, type: 3}
   fleaSprite: {fileID: 21300000, guid: 897bd66017cec44b1806ea6a48a791c1, type: 3}

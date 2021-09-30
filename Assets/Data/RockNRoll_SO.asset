@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209ac9071b7aa461a976497999c99148, type: 3}
   m_Name: RockNRoll_SO
   m_EditorClassIdentifier: 
-  name: 1
+  genreName: 1
   instrument: 1
   buttonSprite: {fileID: 21300000, guid: 73330b4dc28d2418894a67a9a6835850, type: 3}
   fleaSprite: {fileID: 21300000, guid: db4592bbb3cdc48db9a2df4bb0ab9840, type: 3}
