@@ -7,7 +7,7 @@ public class Genre_SO : ScriptableObject
 {
     public GenreName name;
     public Instrument instrument;
-    public Sprite instrumentSprite;
+    public Sprite buttonSprite;
     public Sprite fleaSprite;
-    AudioClip clip;
+    public AudioClip instrumentClip;
 }

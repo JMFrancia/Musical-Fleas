@@ -12,7 +12,7 @@
 
 public enum GenreName {
     HipHop,
-    RocknRoll,
+    RockNRoll,
     Latin,
     Jazz,
     Classical,
