@@ -62,6 +62,40 @@ public class SFXManager : MonoBehaviour
         }
     }
 
+    public int FadeInLoopingSFX(AudioClip clip, float volume, float fadeTime, System.Action callback = null) {
+        int result = PlayLoopingSFX(clip, 0f);
+        StartCoroutine(FadeSFX(result, 0f, volume, fadeTime, callback));
+        return result;
+    }
+
+    public void FadeOutLoopingSFX(int id, float fadeTime, System.Action callback = null)
+    {
+        FadeOutSFX(id, fadeTime, callback);
+    }
+
+    public void FadeOutSFX(int id, float fadeTime, System.Action callback = null) {
+        StartCoroutine(FadeSFX(id, GetSFXVolume(id), 0f, fadeTime, callback));
+    }
+
+    public int FadeInSFX(AudioClip clip, float volume, float fadeTime, System.Action callback = null) {
+        int result = PlaySFX(clip, 0f);
+        StartCoroutine(FadeSFX(result, 0f, volume, fadeTime, callback));
+        return result;
+    }
+
+    IEnumerator FadeSFX(int id, float from, float to, float fadeTime, System.Action callback = null) {
+        float timePassed = 0;
+        WaitForEndOfFrame wait = new WaitForEndOfFrame();
+        while (Mathf.Abs(_activeSources[id].volume - to) > .05f) {
+            float newVolume = Mathf.Lerp(from, to, timePassed / fadeTime);
+            SetSFXVolume(id, newVolume);
+            timePassed = Mathf.Min(fadeTime, timePassed + Time.deltaTime);
+            yield return wait;
+        }
+        SetSFXVolume(id, to);
+        callback?.Invoke();
+    }
+
     /*
      * Stops all non-sequential SFX
      */
