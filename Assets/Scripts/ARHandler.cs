@@ -24,7 +24,7 @@ public class ARHandler : MonoBehaviour
         objectToPlace.transform.position = pose.position;
         objectToPlace.transform.rotation = pose.rotation;
 
-        objectToPlace.transform.localScale = Vector3.one * (targetDistance.isNear ? .01f : .1f);
+        objectToPlace.transform.localScale = Vector3.one * (targetDistance.isNear ? .01f : .1f) * 4f;
 
         RotateObjectTowardCam(objectToPlace, arCamera);
         objectToPlace.SetActive(true);

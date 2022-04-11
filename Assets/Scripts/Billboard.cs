@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Makes object face camera at all times */
 [ExecuteAlways]
 public class Billboard : MonoBehaviour
 {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Manager and gatekeeper for genre data
+ */
 public class GenreManager : MonoBehaviour
 {
     [SerializeField] Genre_SO[] _genres;
@@ -25,7 +28,7 @@ public class GenreManager : MonoBehaviour
 
     private void Awake()
     {
-        _genreByNameDict = new Dictionary<GenreName, Genre_SO>();
+        _genreByNameDict = new Dictionary<GenreName, Genre_SO>();                   
         _genreByInstrumentDict = new Dictionary<Instrument, Genre_SO>();
         for (int n = 0; n < _genres.Length; n++) {
             _genreByNameDict.Add(_genres[n].genreName, _genres[n]);

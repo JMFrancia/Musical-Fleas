@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Manager in charge of playing instrument clips and final song
+ */
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] float _fadeTime = 3f;

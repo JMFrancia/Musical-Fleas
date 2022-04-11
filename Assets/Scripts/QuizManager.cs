@@ -13,9 +13,20 @@ public class QuizManager : MonoBehaviour
 
     List<Button> buttons;
 
+    private void OnEnable()
+    {
+        EventManager.StartListening(Constants.Events.FLEA_FOCUS, ShowButtons);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StartListening(Constants.Events.FLEA_UNFOCUS, HideButtons);
+    }
+
     private void Start()
     {
         buttons = GenerateButtons(buttonGridTransform);
+        HideButtons();
     }
 
     List<Button> GenerateButtons(Transform parent)

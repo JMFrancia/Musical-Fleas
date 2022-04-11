@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+/*
+ * Manages overall game state
+ */
 public class GameManager : MonoBehaviour
 {
     public static Genre_SO CurrentGenre { get; private set; }

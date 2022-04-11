@@ -97,9 +97,11 @@ public class ARPlacementController : MonoBehaviour
 #else
                     if (Input.GetMouseButtonDown(0))
                     {
+                        Debug.Log("Button pressed....");
                         Rect topScreen = new Rect(0, Screen.height / 3, Screen.width, Screen.height);
                         if (topScreen.Contains(Input.mousePosition))
                         {
+                            Debug.Log("Object placed!");
                             PlacementStatus = Status.Placed;
                             onObjectPlaced?.Invoke(hitPose, targetDistance);
                         }
