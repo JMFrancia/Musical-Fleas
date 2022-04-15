@@ -16,7 +16,9 @@ public class Constants : MonoBehaviour
         public const string GAME_OVER = "GameOver";
     }
 
-    public static class Tags { }
+    public static class Tags {
+        public const string FLEA = "Flea";
+    }
 
     public static class Layers {
         public const string DROPCOLLIDER = "DropCollider";

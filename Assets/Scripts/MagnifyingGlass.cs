@@ -29,6 +29,6 @@ public class MagnifyingGlass : MonoBehaviour
     }
 
     bool IsValidTarget(GameObject target) {
-        return target.activeInHierarchy && target.CompareTag("Flea") && Vector3.Distance(target.transform.position, transform.position) <= maxDistance;
+        return target.activeInHierarchy && target.CompareTag(Constants.Tags.FLEA) && Vector3.Distance(target.transform.position, transform.position) <= maxDistance;
     }
 }
